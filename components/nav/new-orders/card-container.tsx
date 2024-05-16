@@ -12,7 +12,7 @@ export default function CardContainer({
   return (
     <div
       className={cn(
-        "flex flex-col rounded-md border border-zinc-700 p-4",
+        "flex flex-col rounded-md border border-zinc-700 p-4 h-fit",
         className
       )}
     >

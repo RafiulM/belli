@@ -18,6 +18,7 @@ import CardContainer from "./card-container";
 import OrderNavItem from "./order-nav-item";
 import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import OrderSummary from "./order-summary";
 
 export default function OrdersModal() {
   const [activeContent, setActiveContent] = useState<string>("create-booking");
@@ -29,10 +30,10 @@ export default function OrdersModal() {
           <PencilSquareIcon className="h-5 w-5 text-white" aria-hidden="true" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10">
+      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10 max-h-[95dvh] h-full">
         <DialogTitle className="text-2xl">New Orders</DialogTitle>
         <Maximize2 className="absolute top-4 right-[72px] w-6 h-6 text-white opacity-70" />
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid grid-cols-12 gap-5 h-[80dvh] overflow-auto">
           <CardContainer className="col-span-3 p-0 gap-1">
             <OrderNavItem
               icon={<SquarePen />}
@@ -65,6 +66,7 @@ export default function OrdersModal() {
               active={false}
             />
           </CardContainer>
+          <OrderSummary />
         </div>
       </DialogContent>
     </Dialog>
