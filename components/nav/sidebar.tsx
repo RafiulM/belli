@@ -6,7 +6,6 @@ import {
   GlobeAmericasIcon,
   PresentationChartLineIcon,
   ServerStackIcon,
-  PencilSquareIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -31,6 +30,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import OrdersModal from "./new-orders/orders-modal";
 
 const navigation = [
   {
@@ -120,7 +120,7 @@ export default function SideBar() {
             className="h-5 w-5 text-white"
             aria-hidden="true"
           />
-          <PencilSquareIcon className="h-5 w-5 text-white" aria-hidden="true" />
+          <OrdersModal />
         </div>
       </div>
       <nav className="flex flex-1 flex-col">
