@@ -38,7 +38,7 @@ export default function OrderSummary() {
         />
         <Separator />
         <div className="flex flex-col gap-3 py-2">
-          <OrderSummaryItem label="Elroy Kareem" />
+          <OrderSummaryItem label="Elroy Carreen" className="font-semibold" />
           <OrderSummaryItem label="Individual Balance" value="$ 0.00" />
         </div>
       </CardContainer>
