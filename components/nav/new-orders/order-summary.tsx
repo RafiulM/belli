@@ -41,12 +41,14 @@ export default function OrderSummary() {
           <OrderSummaryItem label="Individual Balance" value="$ 0.00" />
         </div>
       </CardContainer>
-      <Button className="bg-[#009BA5] text-white font-medium">
+      <Button className="bg-[#009BA5] text-white font-medium hover:bg-[#009BA5]/80">
         <ScrollText className="mr-2" />
         View Invoice
       </Button>
       <Separator />
-      <Button className="bg-[#575BC7] font-medium">Save Reservation</Button>
+      <Button className="bg-[#575BC7] font-medium hover:bg-[#575BC7]/80">
+        Save Reservation
+      </Button>
     </div>
   );
 }
