@@ -31,7 +31,7 @@ type SelectOption = {
   value: string;
 };
 
-interface FormTextFieldProps {
+export interface FormTextFieldProps {
   name: string;
   type: string;
   label?: string;
@@ -95,7 +95,7 @@ export default function FormTextField({
             default:
               return (
                 <FormControl>
-                  <div className="flex gap-2 items-center">
+                  <div className="flex gap-1 items-center">
                     <div className="relative w-full">
                       <Input {...field} className={fieldClassName} />
                       <span className="absolute right-2 top-3 w-4 h-4 flex items-center justify-center text-zinc-400">
@@ -129,8 +129,12 @@ export default function FormTextField({
                       <TooltipTrigger type="button">
                         <Info size={16} />
                       </TooltipTrigger>
-                      <TooltipContent side="right">
-                        {toolTipContent}
+                      <TooltipContent
+                        side="right"
+                        className="flex flex-col gap-2 text-sm"
+                      >
+                        <span className="text-black">{label}</span>
+                        <span className="text-zinc-500">{toolTipContent}</span>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
