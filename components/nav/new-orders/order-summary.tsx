@@ -24,7 +24,7 @@ export default function OrderSummary() {
           <OrderSummaryItem label="Amount Paid" value="$ 20.00" />
         </div>
         <div className="flex flex-col gap-3 py-2">
-          <OrderSummaryItem label="Sub Total" value="$ 20.00" />
+          <OrderSummaryItem label="Subtotal" value="$ 20.00" />
           <OrderSummaryItem label="Grand Total" value="$ 20.00" />
         </div>
         <Separator className="bg-zinc-700" />
