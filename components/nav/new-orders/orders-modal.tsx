@@ -22,6 +22,7 @@ import OrderSummary from "./order-summary";
 import FormTextField from "@/components/form/form-text-field";
 import OrderSectionBooking from "./sections/order-section-booking";
 import OrderSectionConsignment from "./sections/order-section-consignment";
+import OrderSectionProcessRates from "./sections/order-section-process-rates";
 
 export default function OrdersModal() {
   const [activeContent, setActiveContent] = useState<string>("create-booking");
@@ -33,7 +34,7 @@ export default function OrdersModal() {
           <PencilSquareIcon className="h-5 w-5 text-white" aria-hidden="true" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10 max-h-[95dvh] h-full pr-0">
+      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10 max-h-[95dvh] h-fit pr-0">
         <DialogTitle className="text-2xl h-fit">New Orders</DialogTitle>
         <Maximize2 className="absolute top-4 right-[72px] w-6 h-6 text-white opacity-70" />
         <div className="grid grid-cols-12 gap-5 max-h-[78dvh] h-fit overflow-auto pr-4">
@@ -73,6 +74,9 @@ export default function OrdersModal() {
             {activeContent === "create-booking" && <OrderSectionBooking />}
             {activeContent === "consignment-detail" && (
               <OrderSectionConsignment />
+            )}
+            {activeContent === "process-rates" && (
+              <OrderSectionProcessRates />
             )}
           </CardContainer>
           <OrderSummary />
