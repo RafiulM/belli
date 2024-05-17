@@ -57,7 +57,7 @@ export default function FormTextField({
   toolTipContent = "This is a tooltip",
 }: FormTextFieldProps) {
   const fieldClassName = cn(
-    "bg-transparent border-slate-700/70 focus:ring-zinc-800 focus-visible:ring-slate-700/70",
+    "bg-transparent border-zinc-700 focus:ring-zinc-800 focus-visible:ring-zinc-700",
     {
       "pr-8": endIcon,
     }
