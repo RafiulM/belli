@@ -23,6 +23,8 @@ import FormTextField from "@/components/form/form-text-field";
 import OrderSectionBooking from "./sections/order-section-booking";
 import OrderSectionConsignment from "./sections/order-section-consignment";
 import OrderSectionProcessRates from "./sections/order-section-process-rates";
+import OrderSectionShipperDetails from "./sections/order-section-shipper-details";
+import { cn } from "@/lib/utils";
 
 export default function OrdersModal() {
   const [activeContent, setActiveContent] = useState<string>("create-booking");
@@ -70,15 +72,21 @@ export default function OrdersModal() {
               active={false}
             />
           </CardContainer>
-          <CardContainer className="col-span-5">
+          <CardContainer
+            className={cn("col-span-5 relative", {
+              "mt-[35px] rounded-tl-none": activeContent === "shipper-details",
+            })}
+          >
             {activeContent === "create-booking" && <OrderSectionBooking />}
             {activeContent === "consignment-detail" && (
               <OrderSectionConsignment />
             )}
-            {activeContent === "process-rates" && (
-              <OrderSectionProcessRates />
+            {activeContent === "shipper-details" && (
+              <OrderSectionShipperDetails />
             )}
+            {activeContent === "process-rates" && <OrderSectionProcessRates />}
           </CardContainer>
+
           <OrderSummary />
         </div>
       </DialogContent>
