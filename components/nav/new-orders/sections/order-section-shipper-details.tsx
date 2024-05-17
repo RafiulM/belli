@@ -145,7 +145,7 @@ export default function OrderSectionShipperDetails() {
                     "col-span-2": field.name === "awb_status",
                   })}
                 >
-                  <FormTextField {...field} form={shipperForm} />
+                  <FormTextField {...field} form={shipperForm} hideTooltip />
                 </div>
               );
             })}

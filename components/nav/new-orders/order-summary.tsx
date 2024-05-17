@@ -3,6 +3,7 @@ import CardContainer from "./card-container";
 import OrderSummaryItem from "./order-summary-item";
 import { Button } from "@/components/ui/button";
 import { ScrollText } from "lucide-react";
+import { DialogClose } from "@/components/ui/dialog";
 
 export default function OrderSummary() {
   return (
@@ -41,14 +42,22 @@ export default function OrderSummary() {
           <OrderSummaryItem label="Individual Balance" value="$ 0.00" />
         </div>
       </CardContainer>
-      <Button className="bg-[#009BA5] text-white font-medium hover:bg-[#009BA5]/80">
+      <Button
+        className="bg-[#009BA5] text-white font-medium hover:bg-[#009BA5]/80"
+        type="button"
+      >
         <ScrollText className="mr-2" />
         View Invoice
       </Button>
       <Separator />
-      <Button className="bg-[#575BC7] font-medium hover:bg-[#575BC7]/80">
-        Save Reservation
-      </Button>
+      <DialogClose asChild>
+        <Button
+          className="bg-[#575BC7] font-medium hover:bg-[#575BC7]/80"
+          type="button"
+        >
+          Save Reservation
+        </Button>
+      </DialogClose>
     </div>
   );
 }

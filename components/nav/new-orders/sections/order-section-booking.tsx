@@ -61,11 +61,19 @@ export default function OrderSectionBooking() {
         })}
         <div className="flex gap-5 items-center">
           <FormCheckbox form={bookingForm} label="Is Physical" />
-          <Button size="icon" className="bg-[#575BC7] hover:bg-[#575BC7]/80">
+          <Button
+            size="icon"
+            className="bg-[#575BC7] hover:bg-[#575BC7]/80"
+            type="button"
+          >
             <MagnifyingGlassIcon className="w-5 h-5" />
           </Button>
-          <Button size="icon" className="bg-[#575BC7] hover:bg-[#575BC7]/80">
-            <RefreshCcw className="w-5 h-5"  strokeWidth={1.5}/>
+          <Button
+            size="icon"
+            className="bg-[#575BC7] hover:bg-[#575BC7]/80"
+            type="button"
+          >
+            <RefreshCcw className="w-5 h-5" strokeWidth={1.5} />
           </Button>
         </div>
       </form>

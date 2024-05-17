@@ -42,6 +42,7 @@ export interface FormTextFieldProps {
   endIcon?: React.ReactNode;
   hasList?: boolean;
   toolTipContent?: string;
+  hideTooltip?: boolean;
 }
 
 export default function FormTextField({
@@ -55,6 +56,7 @@ export default function FormTextField({
   endIcon,
   hasList,
   toolTipContent = "This is a tooltip",
+  hideTooltip,
 }: FormTextFieldProps) {
   const fieldClassName = cn(
     "bg-transparent border-zinc-700 focus:ring-zinc-800 focus-visible:ring-zinc-700",
@@ -81,7 +83,7 @@ export default function FormTextField({
                       <SelectValue placeholder="" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="text-zinc-500 border-slate-700/70 bg-zinc-800">
+                  <SelectContent className="text-zinc-500 border-zinc-700 bg-zinc-800">
                     {options?.map((option) => {
                       return (
                         <SelectItem key={option.value} value={option.value}>
@@ -123,7 +125,7 @@ export default function FormTextField({
                 <FormLabel className="text-sm">
                   {label} {required ? "*" : ""}{" "}
                 </FormLabel>
-                {toolTipContent && (
+                {toolTipContent && !hideTooltip && (
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger type="button">

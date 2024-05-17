@@ -32,14 +32,14 @@ export default function OrdersModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="icon">
+        <Button size="icon" className="w-9 h-9 hover:bg-zinc-800">
           <PencilSquareIcon className="h-5 w-5 text-white" aria-hidden="true" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10 max-h-[95dvh] h-fit pr-0">
+      <DialogContent className="bg-zinc-900 border-zinc-700 max-w-7xl w-full gap-10 max-h-[95dvh] h-fit pr-0 pb-0">
         <DialogTitle className="text-2xl h-fit">New Orders</DialogTitle>
         <Maximize2 className="absolute top-4 right-[72px] w-6 h-6 text-white opacity-70" />
-        <div className="grid grid-cols-12 gap-5 max-h-[78dvh] h-fit overflow-auto pr-4">
+        <div className="grid grid-cols-12 gap-5 max-h-[78dvh] h-fit overflow-auto pr-4 pb-4">
           <CardContainer className="col-span-3 p-0 gap-1">
             <OrderNavItem
               icon={<SquarePen />}
